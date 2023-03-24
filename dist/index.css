@@ -347,7 +347,7 @@
     }
 }
 
-@media (min-width: 1190px) and (max-width: 1500px){
+@media (min-width: 1190px) and (max-width: 1800px){
     .tutorialsSection{
         width: 100%;
         display: grid;
@@ -361,3 +361,30 @@
     }
 }
 
+@media (min-width: 1500px){
+    .Bannertext{
+        position: absolute;
+        top: 300px;
+        text-align: left;
+        left: 90px;
+        font-family: 'Kodchasan', sans-serif;
+    }
+    .Menu{
+        font-family: 'Kodchasan', sans-serif;
+        margin: 2%;
+        margin-left: 3%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .menutext{
+        font-weight: bold;
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        gap: 30px;
+        color: #042057;
+    }
+}
