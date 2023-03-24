@@ -1,0 +1,24 @@
+.categoriesDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-left: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background: rgba(226, 226, 226, 0.68);
+    font-family: 'Kodchasan', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.imgC{
+    width: 45px;
+
+}
+
+.textC{
+    font-size: 10px;
+    margin: 5px;
+}

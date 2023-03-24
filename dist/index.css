@@ -1,0 +1,129 @@
+
+/* If screen size is MORE than 1000px wide */
+@media (min-width: 1000px){ 
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+    .Menu{
+        font-family: 'Kodchasan', sans-serif;
+        margin: 2%;
+        margin-left: 3%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .menutext{
+        font-weight: bold;
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        gap: 30px;
+        color: #042057;
+    }
+    .login{
+        background-color: #004CDE;
+        color: #ffffff;
+        padding: 8px;
+        padding-left: 35px;
+        padding-right: 35px;
+        border-radius: 15px;
+    }
+    .Banner{
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+    }
+    .Banner img{
+        width: 96%;
+        object-fit: cover;
+    }
+    .Bannertext{
+        position: absolute;
+        top: 260px;
+        text-align: left;
+        left: 80px;
+        font-family: 'Kodchasan', sans-serif;
+    }
+    .Bannertext h1{
+        width: 360px;
+        font-size: 34px;
+    }
+    .Bannertext p{
+        width: 340px;
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    .Bannerbuttons{
+        width: 350px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Kodchasan', sans-serif;
+    }
+    .Bannerbuttons button{
+        font-family: 'Kodchasan', sans-serif;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+    }
+    .button1{
+        background-color: #004CDE;
+        color: #ffffff;
+        border: none;
+    }
+    .button2{
+        background-color: transparent;
+        color: #042057;
+        border: solid #042057;
+    }
+    .Title{
+        font-family: 'Kodchasan', sans-serif;
+        color: #042057;
+        margin-left: 3%;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    section{
+        width: 98%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1199px){
+    .tutorialsSection{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow-x: auto;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+    }
+}
+
+
+/* If screen size is BETWEEN 320px and 425px wide AND the orientation is in landscape mode */
+@media (max-width: 425px) and (orientation: landscape) { 
+    *{
+        padding: 0%;
+        margin: 0%;
+        font-family: 'Kodchasan', sans-serif;
+    }
+    .Menu{
+        margin: 2%;
+        margin-left: 3%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}

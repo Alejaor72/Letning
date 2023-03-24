@@ -27,6 +27,7 @@ class AppContainer extends HTMLElement {
         this.render();
     }
     render() {
+        var _a, _b;
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML += `
             <link rel="stylesheet" href="./index.css">
@@ -36,9 +37,11 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.innerHTML += `
             <link rel="stylesheet" href="./index.css">
             <div class="Menu">
-              <h3>Letning</h3>
-              <a href="">Sign In</a>
-              <a href="">Log In</a>
+              <h2>Letning</h2>
+              <div class="menutext">
+               <a href="">Sign In</a>
+               <a href="" class="login">Log In</a>
+              </div>
             </div>
             `;
         }
@@ -46,12 +49,14 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.innerHTML += `
             <link rel="stylesheet" href="./index.css">   
           <div class="Banner">
-             <img src="/img/Component 1.jpg" alt="">
-             <h3>Letning is a platform of variety tutorials</h3>
-             <p>Learn with people of all kinds, and from anywhere.</p>
-             <div class="Bannerbuttons">
-               <button>See the tutorials</button>
-               <button>Create an account</button>
+             <img src="/img/Component1.jpg" alt="">
+             <div class="Bannertext">
+              <h1>Letning is a platform of variety tutorials</h1>
+              <p>Learn with people of all kinds, and from anywhere.</p>
+              <div class="Bannerbuttons">
+                <button class="button1">See the tutorials</button>
+                <button class="button2">Create an account</button>
+             </div>
             </div>
           </div>
             `;
@@ -64,10 +69,12 @@ class AppContainer extends HTMLElement {
             </div>
             `;
         }
-        this.categoriesList.forEach((data) => {
-            var _a;
-            (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(data);
+        const categoriesCards = this.ownerDocument.createElement("section");
+        categoriesCards.className = 'categoriesSection';
+        this.categoriesList.forEach((categoriesCard) => {
+            categoriesCards.appendChild(categoriesCard);
         });
+        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(categoriesCards);
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML += `
             <link rel="stylesheet" href="./index.css">
@@ -76,10 +83,12 @@ class AppContainer extends HTMLElement {
             </div>
             `;
         }
-        this.tutorialsList.forEach((data) => {
-            var _a;
-            (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(data);
+        const tutorialsCards = this.ownerDocument.createElement("section");
+        tutorialsCards.className = 'tutorialsSection';
+        this.tutorialsList.forEach((tutorialsCard) => {
+            tutorialsCards.appendChild(tutorialsCard);
         });
+        (_b = this.shadowRoot) === null || _b === void 0 ? void 0 : _b.appendChild(tutorialsCards);
     }
 }
 customElements.define("app-container", AppContainer);
