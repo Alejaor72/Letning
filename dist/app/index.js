@@ -28,12 +28,54 @@ class AppContainer extends HTMLElement {
     }
     render() {
         if (this.shadowRoot) {
-            this.shadowRoot.innerHTML = ``;
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">
+            `;
+        }
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">
+            <div class="Menu">
+              <h3>Letning</h3>
+              <a href="">Sign In</a>
+              <a href="">Log In</a>
+            </div>
+            `;
+        }
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">   
+          <div class="Banner">
+             <img src="/img/Component 1.jpg" alt="">
+             <h3>Letning is a platform of variety tutorials</h3>
+             <p>Learn with people of all kinds, and from anywhere.</p>
+             <div class="Bannerbuttons">
+               <button>See the tutorials</button>
+               <button>Create an account</button>
+            </div>
+          </div>
+            `;
+        }
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">
+            <div class="Title">
+            <h3>Select the Categories</h3>
+            </div>
+            `;
         }
         this.categoriesList.forEach((data) => {
             var _a;
             (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(data);
         });
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">
+            <div class="Title">
+            <h3>Tutorials</h3>
+            </div>
+            `;
+        }
         this.tutorialsList.forEach((data) => {
             var _a;
             (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(data);

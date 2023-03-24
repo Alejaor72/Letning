@@ -35,17 +35,65 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        if(this.shadowRoot){
-            this.shadowRoot.innerHTML=``
-           }
-    
-           this.categoriesList.forEach((data) => {
+
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">
+            `;
+        }
+        
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">
+            <div class="Menu">
+              <h3>Letning</h3>
+              <a href="">Sign In</a>
+              <a href="">Log In</a>
+            </div>
+            `;
+        }
+
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">   
+          <div class="Banner">
+             <img src="/img/Component 1.jpg" alt="">
+             <h3>Letning is a platform of variety tutorials</h3>
+             <p>Learn with people of all kinds, and from anywhere.</p>
+             <div class="Bannerbuttons">
+               <button>See the tutorials</button>
+               <button>Create an account</button>
+            </div>
+          </div>
+            `;
+        }
+
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">
+            <div class="Title">
+            <h3>Select the Categories</h3>
+            </div>
+            `;
+        }
+        this.categoriesList.forEach((data) => {
+            this.shadowRoot?.appendChild(data);
+            });
+        
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./index.css">
+            <div class="Title">
+            <h3>Tutorials</h3>
+            </div>
+            `;
+        }
+        this.tutorialsList.forEach((data) => {
             this.shadowRoot?.appendChild(data);
          });
+        
    
-         this.tutorialsList.forEach((data) => {
-            this.shadowRoot?.appendChild(data);
-         });
+        
     }
 }
 
