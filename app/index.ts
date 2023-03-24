@@ -1,32 +1,33 @@
-import dataCategories from "./components/Categories/Categories.js";
-import dataTutorials from "./components/Tutorials/Tutorials.js";
+import * as components from "./components/export.js";
+import dataCategories from "./components/Categories/dataCategories.js";
+import dataTutorials from "./components/Tutorials/dataTutorials.js";
 
 import "./components/export.js";
-import Categories, { Attribute } from "./components/Categories/Categories.js";
+import categories, { Attribute } from "./components/Categories/Categories.js";
 import Tutorials, { Attribute1 } from "./components/Tutorials/Tutorials.js";
 
 class AppContainer extends HTMLElement {
-    categoriesList: Categories[] = [];
+    categoriesList: categories[] = [];
     tutorialsList: Tutorials[] = [];
 
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
 
-        ///dataCategories.forEach((data) => {
-            ///const categoriesCard = this.ownerDocument.createElement("my-categories") as Categories;
-                ///categoriesCard.setAttribute(Attribute.image, data.image);
-                ///categoriesCard.setAttribute(Attribute.tittle, data.title);
-                ///this.categoriesList.push(categoriesCard);
-        ///});
+        dataCategories.forEach((data) => {
+            const categoriesCard = this.ownerDocument.createElement("my-categories") as categories;
+                categoriesCard.setAttribute(Attribute.image, data.image);
+                categoriesCard.setAttribute(Attribute.tittle, data.title);
+                this.categoriesList.push(categoriesCard);
+        });
 
-        ///dataTutorials.forEach((data) => {
-            ///const tutorialsCard = this.ownerDocument.createElement("my-tutorials") as Tutorials;
-                ///tutorialsCard.setAttribute(Attribute1.image, data.image);
-                ///tutorialsCard.setAttribute(Attribute1.tittle, data.title);
-                ///tutorialsCard.setAttribute(Attribute1.creator, data.creator);
-                ///this.tutorialsList.push(tutorialsCard);
-        ///});
+        dataTutorials.forEach((data) => {
+            const tutorialsCard = this.ownerDocument.createElement("my-tutorials") as Tutorials;
+                tutorialsCard.setAttribute(Attribute1.image, data.image);
+                tutorialsCard.setAttribute(Attribute1.tittle, data.title);
+                tutorialsCard.setAttribute(Attribute1.creator, data.creator);
+                this.tutorialsList.push(tutorialsCard);
+        });
     }
     
     connectedCallback() {
